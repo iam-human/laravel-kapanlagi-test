@@ -1,0 +1,231 @@
+.bg {
+    background-image: url("../../../assets/img/bg-login.jpg");
+    height: 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+}
+
+
+.td-hide {
+    display: none !important;
+}
+
+.select2-search__field {
+    height: 30px !important;
+}
+
+.select2-results__option:hover {
+    background-color: #5E72E3 !important;
+    color: #fff !important;
+}
+
+.select2-selection__rendered {
+    font-size: 14px;
+    padding-top: 3px !important;
+}
+
+.select2-selection__placeholder {
+    color: #8898aa !important;
+}
+
+label {
+    font-size: 12px !important;
+}
+
+
+.kuning:hover {
+    color: yellow !important;
+}
+
+/* Modal  */
+@media only screen and (max-width: 1800px) and (min-width: 768px) {
+    div.modalc {
+        top: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 1330px) and (min-width: 768px) {
+    div.form-login {
+        margin-top: 200px !important;
+    }
+}
+
+@media only screen and (width: 375px) and (height: 812px),
+screen and (width: 411px) and (height: 823px) {
+    div.form-login {
+        margin-top: 100px !important;
+    }
+}
+
+.super-btn button:hover,
+button#hapus:hover {
+    background-color: rgba(51, 89, 170, 0.911);
+    border: hidden;
+}
+
+button.btn-login:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+
+/* Device css  */
+@media only screen and (max-width: 991px) {
+
+
+    .super-btn button:hover,
+    button#hapus:hover {
+        background-color: rgba(51, 89, 170, 0.911);
+        border: hidden;
+    }
+
+    .btn-inner--text {
+        display: none;
+    }
+
+    .btn-custom {
+        margin: 5px !important;
+    }
+
+    .spinner-grow {
+        margin-right: 10px;
+    }
+
+    button#hapus {
+        top: 25px !important;
+    }
+
+    .super-btn {
+        left: -50px;
+        padding: 0 !important;
+    }
+
+}
+
+@media only screen and (max-width: 546px) {
+    .super-btn {
+        top: -12px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .super-btn {
+        left: -5px;
+        top: -5px !important;
+        padding-left: 50px !important;
+    }
+
+    button#hapus {
+        right: 58px !important;
+        top: 53px !important;
+    }
+
+}
+
+@media only screen and (max-width: 389px) {
+    button#hapus {
+        top: 63px !important;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    button#hapus {
+        top: 25px !important;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .title-card {
+        padding-bottom: 30px;
+    }
+
+    .super-btn {
+        top: 20px !important;
+    }
+
+    button#hapus {
+        right: 15px !important;
+        top: 5px !important;
+    }
+}
+
+@media only screen and (max-width: 363px) {
+    button#hapus {
+        top: 18px !important;
+    }
+}
+
+@media only screen and (max-width: 313px) {
+    button#hapus {
+        top: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 274px) {
+    button#hapus {
+        top: 45px !important;
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    button#hapus {
+        right: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 255px) {
+    button#hapus {
+        top: 55px !important;
+    }
+}
+
+@media only screen and (max-width: 251px) {
+    button#hapus {
+        right: 8px !important;
+    }
+}
+
+
+/* data tables */
+@media only screen and (max-width: 767px) and (min-width: 465px) {
+    ul.pagination {
+        position: absolute;
+        top: -35px;
+    }
+
+    div#datatable-basic_filter {
+        position: absolute;
+        top: -40px;
+    }
+
+    div.dataTables_length {
+        float: right;
+    }
+
+    div.dataTables_info {
+        float: right;
+    }
+}
+
+@media only screen and (max-width: 464px) {
+    ul.pagination {
+        float: left !important;
+    }
+
+    div#datatable-basic_filter {
+        float: left !important;
+        ;
+    }
+
+    div.dataTables_length {
+        float: left !important;
+    }
+
+    div.dataTables_info {
+        float: left !important;
+    }
+}
