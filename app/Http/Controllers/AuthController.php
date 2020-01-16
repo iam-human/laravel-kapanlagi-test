@@ -18,11 +18,11 @@ class AuthController extends Controller
                 \Session::put('admin',$admin);
                 return redirect('admin');
             }else{
-                \Session::flash('error', 'NIA / PASSWORD tidak cocok !');    
+                \Session::flash('error', 'ID / PASSWORD tidak cocok !');    
                 return redirect('login');
             }
         }else{
-            \Session::flash('error','NIA tidak ditemukan');
+            \Session::flash('error','ID tidak ditemukan');
             return redirect('login'); 
         }
     }

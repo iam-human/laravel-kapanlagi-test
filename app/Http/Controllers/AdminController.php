@@ -89,13 +89,29 @@ class AdminController extends Controller
     public function update(Request $request, Admin $admin)
     {
         $request->validate([
+            'id' => 'required',
             'nia' => 'required',
             'nama' => 'required'
         ]);
-        Admin::where('id',$admin->id)->update([
-            'nia' => $request->nia,
-            'nama' => $request->nama
-        ]);
+        $id = $request->id;
+        $data = Admin::where('id',$admin->id)->first();
+        $pass = $data->password;
+        $password = $request->password;
+        if ($pass == $password) {
+            Admin::where('id',$admin->id)->update([
+                'nia' => $request->nia,
+                'nama' => $request->nama
+            ]);
+        }else{
+            if (Hash::needsRehash($request->password)) {
+                $password = Hash::make($request->password);
+            }
+            Admin::where('id',$admin->id)->update([
+                'nia' => $request->nia,
+                'nama' => $request->nama,
+                'password' => $password
+            ]);
+        }        
         return redirect('admin')->with('status','Data '.$request->nama.' berhasil di Ubah');
     }
 
