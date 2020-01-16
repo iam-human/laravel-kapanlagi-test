@@ -37,6 +37,9 @@ tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
+                        @if (isset($row))
+                            <input type="hidden" value="{{$row->id}}" name="id">
+                        @endif
                         <input class="form-control nik @error('nia') is-invalid @enderror" name="nia" placeholder="Nomer Identitas Admin" 
                         @if (isset($row))
                         value="{{$row->nia}}" id="nia" 

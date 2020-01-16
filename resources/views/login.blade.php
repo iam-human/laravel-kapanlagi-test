@@ -19,7 +19,7 @@
                             <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
                             <span class="btn-inner--text">Google</span>
                         </a> --}}
-                        <h1><img src="{{url('argon/assets/img/icons/kly.png')}}" class="navbar-brand-img" alt="Logo Pyxis"></h1>
+                        <h1><img src="{{url('argon/assets/img/icons/logokly.png')}}" class="navbar-brand-img" alt="Logo Pyxis"></h1>
                     </div>
                 </div>
                 <div class="card-body px-lg-5">
