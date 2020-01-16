@@ -45,7 +45,7 @@ Ketika melakukan **Hapus data , kedua file (.txt dan foto) ** tadi akan ikut ter
 
 -----------------------
 
-<p align="center">Terimakasih, Salam</p>
+<p align="center">Terimakasih, Salam Hormat</p>
 
 -----------------------
 
