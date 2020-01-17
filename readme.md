@@ -41,10 +41,11 @@ Test Project Kapan Lagi Youniverse
 - Yang Kedua adalah Menu User Register , fitur yang sama dengan Admin yaitu CRUD . 
 Namun ada yang membedakan sedikit yaitu **menambahkan Foto** yang nanti akan disimpan pada **Storage Laravel (storage/app/public/registrant/foto)**.
 Dan setiap kali **menambahkan data** , akan **menyimpan data (.txt)** pada **Storage laravel (storage/app/public/registrant/data txt)**, sesuai dengan Rule yang ada . 
-Ketika melakukan **Hapus data , kedua file (.txt dan foto) ** tadi akan ikut terhapus, begitupun ketika **Update** , Isi dalam data txt dengan nama yang di ubah, akan ikut **berubah**.
+Ketika melakukan **Hapus data ,kedua file(.txt dan foto)** tadi akan ikut terhapus, begitupun ketika **Update** , Isi dalam data txt dengan nama yang di ubah, akan ikut **berubah**.
 
 -----------------------
 
-<p align="center">Terimakasih, Salam Hormat (**Humans**)</p>
+<p align="center">Terimakasih, Salam Hormat ( **Humans** )</p>
 
 -----------------------
+
