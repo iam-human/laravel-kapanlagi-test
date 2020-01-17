@@ -86,6 +86,9 @@
           $('#form').find("input[type=text], input[type=password], input[type=file],input[type=email],input[type=phone]").val("");
         });
     });
+    $(document).ready(function(){
+        $('#nia').focus();
+    });
   </script>
   
-  <!-- Mirrored from demos.creative-tim.com/argon-dashboard-pro/pages/dashboards/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Sep 2019 10:54:35 GMT -->
+  

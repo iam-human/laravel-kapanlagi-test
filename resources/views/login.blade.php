@@ -34,7 +34,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                         </div>
-                        <input autocomplete="off" autofocus class="form-control" required placeholder="ID ADMIN" type="text" name="nia">
+                        <input autocomplete="off" autofocus class="form-control" required placeholder="ID ADMIN" type="text" name="nia" id="nia">
                         </div>
                     </div>
                     <div class="form-group">
