@@ -37,9 +37,9 @@ tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input class="form-control @error('nama') is-invalid @enderror" autocomplete="off" name="nama" placeholder="Nama Lengkap (KTP)" 
+                        <input class="form-control @error('nama') is-invalid @enderror" autocomplete="off" name="nama" placeholder="Nama Lengkap (KTP)" id="nama" 
                         @if (isset($row))
-                        value="{{$row->nama}}" id="nama" 
+                        value="{{$row->nama}}" 
                         @else
                         value="{{ old('nama') }}" 
                         @endif

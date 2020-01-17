@@ -31,7 +31,7 @@
                   </div>
                   <div class="col-lg-6 col-5 text-right super-btn" style="position: reative; padding-right: 105px;" >
                     {{-- Tambah  --}}
-                    <button class="btn btn-custom btn-sm btn-icon btn-primary" type="button" data-toggle="modal" data-target="#modalTambah" id="tambah">
+                    <button class="btn btn-custom btn-sm btn-icon btn-primary" type="button"  id="tambah">
                       <span><i class="fas fa-plus"></i></span>
                       <span class="btn-inner--text">Tambah</span>
                     </button>
@@ -44,14 +44,15 @@
                   @include('admin.md_tambah')
                 </div>
               </div>
-              @include('layout.with')
+              {{-- @include('layout.with') --}}
+              <span id="with"></span>
               <form action="{{url('/admin/deladmin')}}" method="post"> 
               @csrf
               <button type="submit" class="btn ml-1 btn-custom btn-sm btn-icon btn-danger" style="position: absolute; right: 15px; top: 30px;"  id="hapus">
                 <span><i class="fas fa-trash-alt"></i></span>
                 <span class="btn-inner--text">Hapus</span>
               </button>
-              <div class="table-responsive py-3">
+              <div class="table-responsive py-3" id="load">
                 <table class="table table-flush" id="datatable-basic">
                   <thead class="thead-light">
                     <tr class="">

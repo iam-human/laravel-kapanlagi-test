@@ -40,20 +40,27 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nia' => 'required',
-            'nama' => 'required'
-        ]);
+        $rules = array(
+            'nia' => 'required|min:3|numeric',
+            'nama' => 'required',
+            'password' => 'required'
+        );
+        $error = Validator::make($request->all(), $rules);
+        if ($error->fails()) {
+            return response()->json(['errors' => $error->errors()->all()]);
+        }
         if (Hash::needsRehash($request->password)) {
             $password = Hash::make($request->password);
         }
-        Admin::create([
-            'id'=>rand(1000,9000).rand(10,99).date("y"),
-            'nia'=>$request->nia,
-            'nama'=>$request->nama,
-            'password'=>$password
-        ]);
-        return redirect('admin')->with('status','Data '.$request->nama.' Berhasil Ditambahkan');
+        $id = rand(1000,9000).rand(10,99).date("y");
+        $data = array(
+            'id' => $id,
+            'nia' => $request->nia,
+            'nama' => $request->nama,
+            'password' => $password
+        );
+        Admin::create($data);        
+        return response()->json(['success' => 'Data Berhasil Ditambahkan']);
         
     }
 

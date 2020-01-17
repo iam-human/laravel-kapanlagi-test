@@ -3,6 +3,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--  Social tags      -->
   <title>KLY - @yield('title')</title>
+  {{-- CSRF TOKEN --}}
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="keywords" content="dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, argon, argon ui kit, creative tim, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit, argon dashboard">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <!-- Schema.org markup for Google+ -->

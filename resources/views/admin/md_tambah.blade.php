@@ -22,11 +22,12 @@ tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
             </button>
         </div>
         <div class="modal-body">
+            <span id="form_result"></span>
             @if (isset($row))
             <form action="{{ url('/admin/'.$row->id) }}" method="post" enctype="multipart/form-data">
             @method('patch')
             @else
-            <form action="{{url('admin')}}" method="post" enctype="multipart/form-data" id="form">
+            <form action="{{url('admin')}}" method="post" enctype="multipart/form-data" id="formAdd">
             @endif
             @csrf
             <div class="row">
@@ -40,9 +41,9 @@ tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                         @if (isset($row))
                             <input type="hidden" value="{{$row->id}}" name="id">
                         @endif
-                        <input class="form-control nik @error('nia') is-invalid @enderror" name="nia" placeholder="Nomer Identitas Admin" 
+                        <input class="form-control nik @error('nia') is-invalid @enderror" name="nia" placeholder="Nomer Identitas Admin"  id="nia"
                         @if (isset($row))
-                        value="{{$row->nia}}" id="nia" 
+                        value="{{$row->nia}}" 
                         @else
                         value="{{ old('nia') }}"
                         @endif                
@@ -92,7 +93,7 @@ tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
                 <button type="submit" class="btn btn-warning">Simpan</button>
                 <button type="button" class="btn btn-link text-warning  ml-auto" data-dismiss="modal">Close</button>                
                 @else
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <input  id="adminSimpan" type="submit" class="btn btn-primary" value="Tambah">
                 <button type="button" class="btn btn-warning" id="reset">Reset Form</button>
                 <button type="button" class="btn btn-link ml-auto" data-dismiss="modal">Close</button>
                 @endif

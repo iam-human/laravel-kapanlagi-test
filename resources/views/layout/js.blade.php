@@ -62,6 +62,53 @@
     //     });    
 
     // });
+    //ajax
+    $(document).ready(function () {
+        $('#tambah').click(function () {
+            $('#modalTambah').modal('show');
+        });
+
+        $("#reset").click(function(){
+          $('#formAdd').find("input[type=text], input[type=password], input[type=file],input[type=email],input[type=phone]").val("");
+        });
+
+        $('#formAdd').on('submit', function (event) {
+            event.preventDefault();
+            if ($('#adminSimpan').val() == 'Tambah') {
+                $.ajax({
+                    url: "{{route('admin.store')}}",
+                    method: "POST",
+                    data: new FormData(this),
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    dataType: "json",
+                    success: function (data) {
+                        var html = "";
+                        if (data.errors) {
+                            html = '<div class="alert alert-danger alert-dismissible fade show mb-0 mx-3 mt-3">';
+                            for (var count = 0; count < data.errors.length; count++) {
+                                html +=  data.errors[count];
+                            }
+                            html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+                            html += '</div>';
+                        }
+                        if (data.success) {
+                            ss = '<div class="alert alert-success alert-dismissible fade show mb-0 mx-3 mt-3">' + data.success + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+                        
+                            $('#with').html(ss);
+
+                            $('#formAdd').find("input[type=text], input[type=password], input[type=file],input[type=email],input[type=phone]").val("");
+                            $('#modalTambah').modal('toggle');
+                            $('#datatable-basic').DataTable().ajax.reload();
+                        }
+                        $('#form_result').html(html);
+                    }
+                })
+            }
+        });
+    });
+
    
 
     // Select2
@@ -82,13 +129,14 @@
   
   <script>
     $(document).ready(function(){
-        $("#reset").click(function(){
-          $('#form').find("input[type=text], input[type=password], input[type=file],input[type=email],input[type=phone]").val("");
+        $('#nia').focus();
+        // Modal
+        $("#modalTambah").on('shown.bs.modal', function(){
+            $(this).find('#nia').focus();
+            $(this).find('#nama').focus();
         });
     });
-    $(document).ready(function(){
-        $('#nia').focus();
-    });
+    
   </script>
   
   
