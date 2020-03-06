@@ -1,7 +1,7 @@
 <h3 align="center">
 Test Project Kapan Lagi Youniverse
 </h3>
-<p align="center"><img src="https://thejakartamarathon.com/wp-content/uploads/2018/10/kly.png"></p>
+<p align="center"><img src="https://media-exp1.licdn.com/dms/image/C510BAQE_hGAZiNQrig/company-logo_200_200/0?e=2159024400&v=beta&t=X9YM_iduNmKcmLbe0BBzawCPaCETHI4jM-jUAZGxFN4"></p>
 
 ---
 
